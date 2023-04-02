@@ -1,19 +1,51 @@
 class Table {
+    //(x, y) - top left corner coordinates, tableSize - the tableSize of table
     static int x, y;
-    static int size;
+    static int tableSize;
+    static int cellSize;
+    static Array cells;
 
     function void init() {
+        var int i, j;
         let x = 128;
         let y = 0;
-        let size = 256;
+        let tableSize = 256;
+        let cellSize = 64;
+        let cells = Array.new(16);
+        let j = 0;
+        while (j < 4) {
+            let i = 0;
+            while (i < 4) {
+                let cells[j * 4 + i] = Cell.new(cellSize * i + x, cellSize * j + y, cellSize, j * 4 + i);
+                let i = i + 1;
+            }
+            let j = j + 1;
+        }
         return;
     }
 
-    function void printTable() {
+    function void print() {
+        var int i, j;
+        var Cell temp;
+        do Table.printFrame();
+        let j = 0;
+        while (j < 4) {
+            let i = 0;
+            while (i < 4) {
+                let temp = cells[j * 4 + i];
+                do temp.print();
+                let i = i + 1;
+            }
+            let j = j + 1;
+        }
+        return;
+    }
+
+    function void printFrame() {
         do Screen.setColor(true);
-        do Screen.drawRectangle(x, y, x + size - 1, y + size - 1);
+        do Screen.drawRectangle(x, y, x + tableSize - 1, y + tableSize - 1);
         do Screen.setColor(false);
-        do Screen.drawRectangle(x + 1, y + 1, x + size - 2, y + size - 2);
+        do Screen.drawRectangle(x + 1, y + 1, x + tableSize - 2, y + tableSize - 2);
         return;
     }
 }

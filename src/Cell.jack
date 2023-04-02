@@ -1,4 +1,23 @@
 class Cell {
     field int x, y;
     field int size;
+    field int value;
+
+    constructor Cell new(int Ax, int Ay, int Asize, int Avalue) {
+        let x = Ax;
+        let y = Ay;
+        let size = Asize;
+        let value = Avalue;
+        return this;
+    }
+
+    method void print() {
+        do Screen.setColor(true);
+        do Screen.drawRectangle(x, y, x + size - 1, y + size - 1);
+        do Screen.setColor(false);
+        do Screen.drawRectangle(x + 1, y + 1, x + size - 2, y + size - 2);
+        do Output.moveCursor(0, 0);
+        //TODO realize print value
+        return;
+    }
 }
