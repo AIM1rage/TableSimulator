@@ -1,0 +1,8 @@
+class Main {
+    function void main() {
+        do Output.printString("Hello, World!");
+        do Table.init();
+        do Table.printTable();
+        return;
+    }
+}

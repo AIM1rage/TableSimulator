@@ -1,0 +1,4 @@
+class Cell {
+    field int x, y;
+    field int size;
+}
