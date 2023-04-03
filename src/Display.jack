@@ -1,0 +1,6 @@
+class Display {
+    function printNumber1() {
+        //Paste code here
+        return;
+    }
+}
