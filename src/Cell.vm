@@ -73,25 +73,6 @@ if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
 push this 1
-push constant 16
-call Math.multiply 2
-push this 0
-add
-call Display.printNumber0 1
-pop temp 0
-push constant 500
-call Sys.wait 1
-pop temp 0
-push constant 0
-return
-label IF_FALSE0
-push this 3
-push constant 0
-eq
-if-goto IF_TRUE1
-goto IF_FALSE1
-label IF_TRUE1
-push this 1
 push constant 32
 call Math.multiply 2
 push this 0
@@ -105,13 +86,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE1
+label IF_FALSE0
 push this 3
 push constant 1
 eq
-if-goto IF_TRUE2
-goto IF_FALSE2
-label IF_TRUE2
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
 push this 1
 push constant 32
 call Math.multiply 2
@@ -126,13 +107,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE2
+label IF_FALSE1
 push this 3
 push constant 2
 eq
-if-goto IF_TRUE3
-goto IF_FALSE3
-label IF_TRUE3
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
 push this 1
 push constant 32
 call Math.multiply 2
@@ -147,13 +128,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE3
+label IF_FALSE2
 push this 3
 push constant 3
 eq
-if-goto IF_TRUE4
-goto IF_FALSE4
-label IF_TRUE4
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
 push this 1
 push constant 32
 call Math.multiply 2
@@ -168,13 +149,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE4
+label IF_FALSE3
 push this 3
 push constant 4
 eq
-if-goto IF_TRUE5
-goto IF_FALSE5
-label IF_TRUE5
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
 push this 1
 push constant 32
 call Math.multiply 2
@@ -189,13 +170,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE5
+label IF_FALSE4
 push this 3
 push constant 5
 eq
-if-goto IF_TRUE6
-goto IF_FALSE6
-label IF_TRUE6
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
 push this 1
 push constant 32
 call Math.multiply 2
@@ -210,13 +191,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE6
+label IF_FALSE5
 push this 3
 push constant 6
 eq
-if-goto IF_TRUE7
-goto IF_FALSE7
-label IF_TRUE7
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
 push this 1
 push constant 32
 call Math.multiply 2
@@ -231,13 +212,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE7
+label IF_FALSE6
 push this 3
 push constant 7
 eq
-if-goto IF_TRUE8
-goto IF_FALSE8
-label IF_TRUE8
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
 push this 1
 push constant 32
 call Math.multiply 2
@@ -252,13 +233,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE8
+label IF_FALSE7
 push this 3
 push constant 8
 eq
-if-goto IF_TRUE9
-goto IF_FALSE9
-label IF_TRUE9
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
 push this 1
 push constant 32
 call Math.multiply 2
@@ -273,13 +254,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE9
+label IF_FALSE8
 push this 3
 push constant 9
 eq
-if-goto IF_TRUE10
-goto IF_FALSE10
-label IF_TRUE10
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
 push this 1
 push constant 32
 call Math.multiply 2
@@ -294,13 +275,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE10
+label IF_FALSE9
 push this 3
 push constant 10
 eq
-if-goto IF_TRUE11
-goto IF_FALSE11
-label IF_TRUE11
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
 push this 1
 push constant 32
 call Math.multiply 2
@@ -315,13 +296,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE11
+label IF_FALSE10
 push this 3
 push constant 11
 eq
-if-goto IF_TRUE12
-goto IF_FALSE12
-label IF_TRUE12
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
 push this 1
 push constant 32
 call Math.multiply 2
@@ -336,13 +317,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE12
+label IF_FALSE11
 push this 3
 push constant 12
 eq
-if-goto IF_TRUE13
-goto IF_FALSE13
-label IF_TRUE13
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
 push this 1
 push constant 32
 call Math.multiply 2
@@ -357,13 +338,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE13
+label IF_FALSE12
 push this 3
 push constant 13
 eq
-if-goto IF_TRUE14
-goto IF_FALSE14
-label IF_TRUE14
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
 push this 1
 push constant 32
 call Math.multiply 2
@@ -378,13 +359,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE14
+label IF_FALSE13
 push this 3
 push constant 14
 eq
-if-goto IF_TRUE15
-goto IF_FALSE15
-label IF_TRUE15
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
 push this 1
 push constant 32
 call Math.multiply 2
@@ -399,13 +380,13 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE15
+label IF_FALSE14
 push this 3
 push constant 15
 eq
-if-goto IF_TRUE16
-goto IF_FALSE16
-label IF_TRUE16
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
 push this 1
 push constant 32
 call Math.multiply 2
@@ -420,6 +401,6 @@ call Sys.wait 1
 pop temp 0
 push constant 0
 return
-label IF_FALSE16
+label IF_FALSE15
 push constant 0
 return

@@ -7,7 +7,7 @@ class TableGame {
     }
 
     method void run() {
-        
+        do Screen.clearScreen();
         do table.print();
         return;
     }

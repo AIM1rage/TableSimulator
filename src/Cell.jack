@@ -26,11 +26,6 @@ class Cell {
         do Screen.setColor(false);
         do Screen.drawRectangle(x + 1, y + 1, x + size - 2, y + size - 2);
 		if (value = 0){
-			do Display.printNumber0(y * 16 + x);
-			do Sys.wait(500);
-			return;
-		}
-		if (value = 0){
 			do Display.printNumber0(y * 32 + (x / 16));
 			do Sys.wait(500);
 			return;
