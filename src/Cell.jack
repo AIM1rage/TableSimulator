@@ -25,12 +25,70 @@ class Cell {
         do Screen.drawRectangle(x, y, x + size - 1, y + size - 1);
         do Screen.setColor(false);
         do Screen.drawRectangle(x + 1, y + 1, x + size - 2, y + size - 2);
-        //do Output.moveCursor(0, 0);
-        //TODO realize value printing
-        if (value = 0) {
-            do Display.printNumber1();
-            return;
-        }
+		//if (value = 0)}
+		//	do Display.printNumber0();
+		//	return;
+		//}
+		//if (value = 1)}
+		//	do Display.printNumber1();
+		//	return;
+		//}
+		//if (value = 2)}
+		//	do Display.printNumber2();
+		//	return;
+		//}
+		//if (value = 3)}
+		//	do Display.printNumber3();
+		//	return;
+		//}
+		//if (value = 4)}
+		//	do Display.printNumber4();
+		//	return;
+		//}
+		//if (value = 5)}
+		//	do Display.printNumber5();
+		//	return;
+		//}
+		//if (value = 6)}
+		//	do Display.printNumber6();
+		//	return;
+		//}
+		//if (value = 7)}
+		//	do Display.printNumber7();
+		//	return;
+		//}
+		//if (value = 8)}
+		//	do Display.printNumber8();
+		//	return;
+		//}
+		//if (value = 9)}
+		//	do Display.printNumber9();
+		//	return;
+		//}
+		//if (value = 10)}
+		//	do Display.printNumber10();
+		//	return;
+		//}
+		//if (value = 11)}
+		//	do Display.printNumber11();
+		//	return;
+		//}
+		//if (value = 12)}
+		//	do Display.printNumber12();
+		//	return;
+		//}
+		//if (value = 13)}
+		//	do Display.printNumber13();
+		//	return;
+		//}
+		//if (value = 14)}
+		//	do Display.printNumber14();
+		//	return;
+		//}
+		//if (value = 15)}
+		//	do Display.printNumber15();
+		//	return;
+		//}
         return;
     }
 }
