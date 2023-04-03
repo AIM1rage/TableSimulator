@@ -18,7 +18,7 @@ class Table {
         }
         if (n = 3) {
             let x = 160;
-            let y = 0;
+            let y = 32;
             let tableSize = 192;
             let cellSize = 64;
         }

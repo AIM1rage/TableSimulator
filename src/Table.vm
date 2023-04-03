@@ -25,9 +25,9 @@ eq
 if-goto IF_TRUE1
 goto IF_FALSE1
 label IF_TRUE1
-push constant 144
+push constant 160
 pop this 1
-push constant 0
+push constant 32
 pop this 2
 push constant 192
 pop this 3
