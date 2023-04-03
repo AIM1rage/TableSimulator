@@ -1,8 +1,10 @@
 class TableGame {
     field Table table;
+    field int actionsCount;
 
     constructor TableGame new() {
         let table = Table.new(4);
+        let actionsCount = 0;
         return this;
     }
 
@@ -11,19 +13,26 @@ class TableGame {
         var char key;
         do Screen.clearScreen();
         do table.print();
+        do Output.moveCursor(0, 0);
+        do Output.printString("Level 0");
+        do Output.println();
+        do Output.printString("Bread!");
+        do Output.println();
         while (~finished) {
             if (key = 131) {
-                do table.makeMove(1);
+                let actionsCount = actionsCount + table.makeMove(1);
             }
             if (key = 133) {
-                do table.makeMove(2);
+                let actionsCount = actionsCount + table.makeMove(2);
             }
             if (key = 132) {
-                do table.makeMove(3);
+                let actionsCount = actionsCount + table.makeMove(3);
             }
             if (key = 130) {
-                do table.makeMove(4);
+                let actionsCount = actionsCount + table.makeMove(4);
             }
+            do Output.moveCursor(3, 0);
+            do Output.printInt(actionsCount);
             let key = Keyboard.keyPressed();
         }
         return;

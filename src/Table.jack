@@ -55,7 +55,7 @@ class Table {
     }
 
     //1 - up, 2 - down, 3 - right, 4 - left
-    method void makeMove(int direction) {
+    method int makeMove(int direction) {
         var boolean moved;
         var Cell cellFrom, cellTo;
         var int valueFrom, valueTo;
@@ -93,7 +93,8 @@ class Table {
             do cellTo.setValue(valueFrom);
             do cellFrom.print();
             do cellTo.print();
+            return 1;
         }
-        return;
+        return 0;
     }
 }

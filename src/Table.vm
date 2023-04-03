@@ -342,6 +342,8 @@ pop temp 0
 push local 2
 call Cell.print 1
 pop temp 0
+push constant 1
+return
 label IF_FALSE4
 push constant 0
 return
