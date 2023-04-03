@@ -11,13 +11,22 @@ class Cell {
         return this;
     }
 
+    method int getValue() {
+        return value;
+    }
+
+    method void setValue(int Avalue) {
+        let value = Avalue;
+        return;
+    }
+
     method void print() {
         do Screen.setColor(true);
         do Screen.drawRectangle(x, y, x + size - 1, y + size - 1);
         do Screen.setColor(false);
         do Screen.drawRectangle(x + 1, y + 1, x + size - 2, y + size - 2);
-        do Output.moveCursor(0, 0);
-        //TODO realize print value
+        //do Output.moveCursor(0, 0);
+        //TODO realize value printing
         return;
     }
 }

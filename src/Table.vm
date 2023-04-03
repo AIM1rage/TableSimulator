@@ -10,6 +10,10 @@ pop static 3
 push constant 16
 call Array.new 1
 pop static 4
+push constant 3
+pop static 5
+push constant 3
+pop static 6
 push constant 0
 pop local 1
 label WHILE_EXP0
@@ -153,6 +157,25 @@ add
 push constant 2
 sub
 call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Table.moveCells 2
+push argument 0
+call Cell.getValue 1
+pop local 0
+push argument 1
+call Cell.getValue 1
+pop local 1
+push argument 0
+push local 1
+call Cell.setValue 2
+pop temp 0
+push argument 1
+push local 0
+call Cell.setValue 2
+pop temp 0
+call Table.print 0
 pop temp 0
 push constant 0
 return

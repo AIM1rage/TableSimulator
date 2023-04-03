@@ -4,6 +4,7 @@ class Table {
     static int tableSize;
     static int cellSize;
     static Array cells;
+    static itn playerX, playerY;
 
     function void init() {
         var int i, j;
@@ -12,6 +13,8 @@ class Table {
         let tableSize = 256;
         let cellSize = 64;
         let cells = Array.new(16);
+        let playerX = 3;
+        let playerY = 3;
         let j = 0;
         while (j < 4) {
             let i = 0;
@@ -46,6 +49,16 @@ class Table {
         do Screen.drawRectangle(x, y, x + tableSize - 1, y + tableSize - 1);
         do Screen.setColor(false);
         do Screen.drawRectangle(x + 1, y + 1, x + tableSize - 2, y + tableSize - 2);
+        return;
+    }
+
+    function void moveCells(Cell cell1, Cell cell2) {
+        var int value1, value2;
+        let value1 = cell1.getValue();
+        let value2 = cell2.getValue();
+        do cell1.setValue(value2);
+        do cell2.setValue(value1);
+        do Table.print();
         return;
     }
 }
