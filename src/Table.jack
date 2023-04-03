@@ -10,11 +10,19 @@ class Table {
     constructor Table new(int An) {
         var int i, j;
         let n = An;
-        let x = 128;
-        let y = 0;
-        let tableSize = 256;
-        let cellSize = 64;
-        let cells = Array.new(16);
+        if (n = 4) {
+            let x = 128;
+            let y = 0;
+            let tableSize = 256;
+            let cellSize = 64;
+        }
+        if (n = 3) {
+            let x = 160;
+            let y = 0;
+            let tableSize = 192;
+            let cellSize = 64;
+        }
+        let cells = Array.new(n * n);
         let playerX = 0;
         let playerY = 0;
         let j = 0;

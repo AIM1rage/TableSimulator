@@ -4,6 +4,12 @@ call Memory.alloc 1
 pop pointer 0
 push argument 0
 pop this 0
+push this 0
+push constant 4
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
 push constant 128
 pop this 1
 push constant 0
@@ -12,7 +18,25 @@ push constant 256
 pop this 3
 push constant 64
 pop this 4
-push constant 16
+label IF_FALSE0
+push this 0
+push constant 3
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 144
+pop this 1
+push constant 0
+pop this 2
+push constant 192
+pop this 3
+push constant 64
+pop this 4
+label IF_FALSE1
+push this 0
+push this 0
+call Math.multiply 2
 call Array.new 1
 pop this 5
 push constant 0
