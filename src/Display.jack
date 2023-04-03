@@ -647,6 +647,78 @@ class Display {
         return;
     }
 
+    function void printNumber10(int location) {
+        var int memAddress; 
+        let memAddress = 16384+location;
+        // column 0
+        do Memory.poke(memAddress, -1);
+        do Memory.poke(memAddress +32, 1);
+        do Memory.poke(memAddress +64, 4065);
+        do Memory.poke(memAddress +96, 4065);
+        do Memory.poke(memAddress +128, 4065);
+        do Memory.poke(memAddress +160, 4065);
+        do Memory.poke(memAddress +192, 4093);
+        do Memory.poke(memAddress +224, 4093);
+        do Memory.poke(memAddress +256, 4093);
+        do Memory.poke(memAddress +288, 4093);
+        do Memory.poke(memAddress +320, 4093);
+        do Memory.poke(memAddress +352, 4065);
+        do Memory.poke(memAddress +384, 4065);
+        do Memory.poke(memAddress +416, 4065);
+        do Memory.poke(memAddress +448, 4065);
+        do Memory.poke(memAddress +480, 4065);
+        do Memory.poke(memAddress +512, 4065);
+        do Memory.poke(memAddress +544, 4065);
+        do Memory.poke(memAddress +576, 4065);
+        do Memory.poke(memAddress +608, 4065);
+        do Memory.poke(memAddress +640, 4065);
+        do Memory.poke(memAddress +672, 4065);
+        do Memory.poke(memAddress +704, 4065);
+        do Memory.poke(memAddress +736, 4065);
+        do Memory.poke(memAddress +768, 4065);
+        do Memory.poke(memAddress +800, 4065);
+        do Memory.poke(memAddress +832, 32765);
+        do Memory.poke(memAddress +864, 32765);
+        do Memory.poke(memAddress +896, 32765);
+        do Memory.poke(memAddress +928, 32765);
+        do Memory.poke(memAddress +960, 1);
+        do Memory.poke(memAddress +992, -1);
+        // column 1
+        do Memory.poke(memAddress +1, -1);
+        do Memory.poke(memAddress +33, ~32767);
+        do Memory.poke(memAddress +65, -28676);
+        do Memory.poke(memAddress +97, -28676);
+        do Memory.poke(memAddress +129, -28676);
+        do Memory.poke(memAddress +161, -17393);
+        do Memory.poke(memAddress +193, -17393);
+        do Memory.poke(memAddress +225, -17393);
+        do Memory.poke(memAddress +257, -17393);
+        do Memory.poke(memAddress +289, -17393);
+        do Memory.poke(memAddress +321, -17393);
+        do Memory.poke(memAddress +353, -17393);
+        do Memory.poke(memAddress +385, -17393);
+        do Memory.poke(memAddress +417, -17393);
+        do Memory.poke(memAddress +449, -17393);
+        do Memory.poke(memAddress +481, -17393);
+        do Memory.poke(memAddress +513, -17393);
+        do Memory.poke(memAddress +545, -17393);
+        do Memory.poke(memAddress +577, -17393);
+        do Memory.poke(memAddress +609, -17393);
+        do Memory.poke(memAddress +641, -17393);
+        do Memory.poke(memAddress +673, -17393);
+        do Memory.poke(memAddress +705, -17393);
+        do Memory.poke(memAddress +737, -17393);
+        do Memory.poke(memAddress +769, -17393);
+        do Memory.poke(memAddress +801, -17393);
+        do Memory.poke(memAddress +833, -17393);
+        do Memory.poke(memAddress +865, -28676);
+        do Memory.poke(memAddress +897, -28676);
+        do Memory.poke(memAddress +929, -28676);
+        do Memory.poke(memAddress +961, ~32767);
+        do Memory.poke(memAddress +993, -1);
+        return;
+    }
+
     function void printNumber0(int location) {
         var int memAddress; 
         let memAddress = 16384+location;
@@ -1161,11 +1233,6 @@ class Display {
         do Output.moveCursor(12, 36);
         do Output.printString("DETERMINANT");
         //do Output.moveCursor();
-        return;
-    }
-
-    function void printNumber1() {
-        //Paste code here
         return;
     }
 }
