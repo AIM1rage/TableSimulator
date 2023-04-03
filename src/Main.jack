@@ -1,8 +1,8 @@
 class Main {
-    function void main() {
-        do Output.printString("Gosha, Pidor!");
-        do Table.init();
-        do Table.print();
+    function void main() { 
+        var TableGame game;
+        let game = TableGame.new();
+        do game.run();
         return;
     }
 }

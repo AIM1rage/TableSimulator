@@ -1,0 +1,13 @@
+class TableGame {
+    field Table table;
+
+    constructor TableGame new() {
+        let table = Table.new();
+        return this;
+    }
+
+    method void run() {
+        do table.print();
+        return;
+    }
+}
