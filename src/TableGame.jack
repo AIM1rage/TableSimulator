@@ -2,13 +2,30 @@ class TableGame {
     field Table table;
 
     constructor TableGame new() {
-        let table = Table.new();
+        let table = Table.new(4);
         return this;
     }
 
     method void run() {
+        var boolean finished;
+        var char key;
         do Screen.clearScreen();
         do table.print();
+        while (~finished) {
+            if (key = 131) {
+                do table.makeMove(1);
+            }
+            if (key = 133) {
+                do table.makeMove(2);
+            }
+            if (key = 132) {
+                do table.makeMove(3);
+            }
+            if (key = 130) {
+                do table.makeMove(4);
+            }
+            let key = Keyboard.keyPressed();
+        }
         return;
     }
 }

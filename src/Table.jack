@@ -1,25 +1,27 @@
 class Table {
     //(x, y) - top left corner coordinates, tableSize - the tableSize of table
+    field int n;
     field int x, y;
     field int tableSize;
     field int cellSize;
     field Array cells;
     field itn playerX, playerY;
 
-    constructor Table new() {
+    constructor Table new(int An) {
         var int i, j;
+        let n = An;
         let x = 128;
         let y = 0;
         let tableSize = 256;
         let cellSize = 64;
         let cells = Array.new(16);
-        let playerX = 3;
-        let playerY = 3;
+        let playerX = 0;
+        let playerY = 0;
         let j = 0;
-        while (j < 4) {
+        while (j < n) {
             let i = 0;
-            while (i < 4) {
-                let cells[j * 4 + i] = Cell.new(cellSize * i + x, cellSize * j + y, cellSize, j * 4 + i);
+            while (i < n) {
+                let cells[j * n + i] = Cell.new(cellSize * i + x, cellSize * j + y, cellSize, j * n + i);
                 let i = i + 1;
             }
             let j = j + 1;
@@ -32,10 +34,10 @@ class Table {
         var Cell temp;
         do printFrame();
         let j = 0;
-        while (j < 4) {
+        while (j < n) {
             let i = 0;
-            while (i < 4) {
-                let temp = cells[j * 4 + i];
+            while (i < n) {
+                let temp = cells[j * n + i];
                 do temp.print();
                 let i = i + 1;
             }
@@ -52,13 +54,46 @@ class Table {
         return;
     }
 
-    method void moveCells(Cell cell1, Cell cell2) {
-        var int value1, value2;
-        let value1 = cell1.getValue();
-        let value2 = cell2.getValue();
-        do cell1.setValue(value2);
-        do cell2.setValue(value1);
-        do print();
+    //1 - up, 2 - down, 3 - right, 4 - left
+    method void makeMove(int direction) {
+        var boolean moved;
+        var Cell cellFrom, cellTo;
+        var int valueFrom, valueTo;
+        let moved = false;
+        let cellFrom = cells[playerY * n + playerX];
+        let valueFrom = cellFrom.getValue();
+        if ((direction = 1) & (playerY > 0)) {
+            let cellTo = cells[playerY - 1 * n + playerX];
+            let valueTo = cellTo.getValue();
+            let playerY = playerY - 1;
+            let moved = true;
+        }
+        if ((direction = 2) & (playerY + 1 < n)) {
+            let cellTo = cells[playerY + 1 * n + playerX];
+            let valueTo = cellTo.getValue();
+            let playerY = playerY + 1;
+            let moved = true;
+
+        }
+        if ((direction = 3) & (playerX + 1 < n)) {
+            let cellTo = cells[playerY * n + playerX + 1];
+            let valueTo = cellTo.getValue();
+            let playerX = playerX + 1;
+            let moved = true;
+
+        }
+        if ((direction = 4) & (playerX > 0)) {
+            let cellTo = cells[playerY * n + playerX - 1];
+            let valueTo = cellTo.getValue();
+            let playerX = playerX - 1;
+            let moved = true;
+        }
+        if (moved) {
+            do cellFrom.setValue(valueTo);
+            do cellTo.setValue(valueFrom);
+            do cellFrom.print();
+            do cellTo.print();
+        }
         return;
     }
 }

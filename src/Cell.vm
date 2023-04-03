@@ -79,9 +79,9 @@ push this 0
 push constant 16
 call Math.divide 2
 add
-call Display.printNumber0 1
+call Display.printV 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -102,7 +102,7 @@ call Math.divide 2
 add
 call Display.printNumber1 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -123,7 +123,7 @@ call Math.divide 2
 add
 call Display.printNumber2 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -144,7 +144,7 @@ call Math.divide 2
 add
 call Display.printNumber3 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -165,7 +165,7 @@ call Math.divide 2
 add
 call Display.printNumber4 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -186,7 +186,7 @@ call Math.divide 2
 add
 call Display.printNumber5 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -207,7 +207,7 @@ call Math.divide 2
 add
 call Display.printNumber6 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -228,7 +228,7 @@ call Math.divide 2
 add
 call Display.printNumber7 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -249,7 +249,7 @@ call Math.divide 2
 add
 call Display.printNumber8 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -270,7 +270,7 @@ call Math.divide 2
 add
 call Display.printNumber9 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -291,7 +291,7 @@ call Math.divide 2
 add
 call Display.printNumber10 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -312,7 +312,7 @@ call Math.divide 2
 add
 call Display.printNumber11 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -333,7 +333,7 @@ call Math.divide 2
 add
 call Display.printNumber12 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -354,7 +354,7 @@ call Math.divide 2
 add
 call Display.printNumber13 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -375,7 +375,7 @@ call Math.divide 2
 add
 call Display.printNumber14 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
@@ -396,7 +396,7 @@ call Math.divide 2
 add
 call Display.printNumber15 1
 pop temp 0
-push constant 500
+push constant 100
 call Sys.wait 1
 pop temp 0
 push constant 0
