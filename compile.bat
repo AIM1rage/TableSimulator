@@ -2,8 +2,11 @@
 
 cd ".\tools\"
 start JackCompiler.bat "..\src"
-pause
 cd "..\src"
+timeout /t 1 /nobreak
 move *.vm "..\vm"
-pause
+timeout /t 1 /nobreak
 del *.vm
+cd "..\tools"
+timeout /t 1 /nobreak
+start VMEmulator.bat
