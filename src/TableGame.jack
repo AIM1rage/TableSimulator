@@ -3,8 +3,6 @@ class TableGame {
     field int actionsCount;
 
     constructor TableGame new() {
-        let table = Table.new(4);
-        let actionsCount = 0;
         return this;
     }
 

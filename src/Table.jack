@@ -7,8 +7,9 @@ class Table {
     field Array cells;
     field itn playerX, playerY;
 
-    constructor Table new(int An) {
+    constructor Table new(int An, Array gameField) {
         var int i, j;
+        var int fieldValue;
         let n = An;
         if (n = 4) {
             let x = 128;
@@ -23,13 +24,16 @@ class Table {
             let cellSize = 64;
         }
         let cells = Array.new(n * n);
-        let playerX = 0;
-        let playerY = 0;
         let j = 0;
         while (j < n) {
             let i = 0;
             while (i < n) {
-                let cells[j * n + i] = Cell.new(cellSize * i + x, cellSize * j + y, cellSize, j * n + i);
+                let fieldValue = gameField[j * n + i];
+                if (fieldValue = 0) {
+                    let playerX = i;
+                    let playerY = j;
+                }
+                let cells[j * n + i] = Cell.new(cellSize * i + x, cellSize * j + y, cellSize, fieldValue);
                 let i = i + 1;
             }
             let j = j + 1;

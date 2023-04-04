@@ -1,4 +1,4 @@
-function Table.new 2
+function Table.new 3
 push constant 8
 call Memory.alloc 1
 pop pointer 0
@@ -40,10 +40,6 @@ call Math.multiply 2
 call Array.new 1
 pop this 5
 push constant 0
-pop this 6
-push constant 0
-pop this 7
-push constant 0
 pop local 1
 label WHILE_EXP0
 push local 1
@@ -64,6 +60,27 @@ push this 0
 call Math.multiply 2
 push local 0
 add
+push argument 1
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+push constant 0
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+pop this 6
+push local 1
+pop this 7
+label IF_FALSE2
+push local 1
+push this 0
+call Math.multiply 2
+push local 0
+add
 push this 5
 add
 push this 4
@@ -77,11 +94,7 @@ call Math.multiply 2
 push this 2
 add
 push this 4
-push local 1
-push this 0
-call Math.multiply 2
-push local 0
-add
+push local 2
 call Cell.new 4
 pop temp 0
 pop pointer 1

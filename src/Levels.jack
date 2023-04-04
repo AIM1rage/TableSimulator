@@ -1,0 +1,38 @@
+class Levels {
+    static Array levels;
+
+    function void init() {
+        var Array gameField;
+        let levels = Array.new(2);
+        //Level Bread
+        let gameField = Array.new(9);
+        let gameField[0] = 1;
+        let gameField[1] = 2;
+        let gameField[2] = 3;
+        let gameField[3] = 4;
+        let gameField[4] = 5;
+        let gameField[5] = 6;
+        let gameField[6] = 7;
+        let gameField[7] = 0;
+        let gameField[8] = 8;
+        let levels[0] = Level.new(3, "Bread", gameField);
+        //Level Vegetable
+        let gameField = Array.new(9);
+        let gameField[0] = 1;
+        let gameField[1] = 2;
+        let gameField[2] = 3;
+        let gameField[3] = 4;
+        let gameField[4] = 0;
+        let gameField[5] = 6;
+        let gameField[6] = 7;
+        let gameField[7] = 5;
+        let gameField[8] = 8;
+        let levels[0] = Level.new(3, "Vegetable", gameField);
+        //Level Soup
+        return;
+    }
+
+    function Array getLevels() {
+        return levels;
+    }
+}

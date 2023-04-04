@@ -1,0 +1,24 @@
+class Level {
+    field int n;
+    field Array gameField;
+    field String name;
+
+    constructor Level new(int An, String Aname, Array AgameField) {
+        let n = An;
+        let name = Aname;
+        let gameField = AgameField;
+        return this;
+    }
+
+    method int getN() {
+        return n;
+    }
+
+    method Array getGameField() {
+        return gameField;
+    }
+
+    method String getName() {
+        return name;
+    }
+}
