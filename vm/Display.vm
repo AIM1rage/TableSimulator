@@ -8920,9 +8920,6 @@ pop temp 0
 push constant 0
 return
 function Display.printMenu 0
-push constant 0
-call Display.printShalost 1
-pop temp 0
 push constant 2
 push constant 24
 call Output.moveCursor 2

@@ -1486,7 +1486,6 @@ class Display {
     }
     
     function void printMenu() {
-        do Display.printShalost(0);
         do Output.moveCursor(2, 24);
         do Output.printString("TABLE SIMULATOR");
         do Output.moveCursor(4, 22);

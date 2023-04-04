@@ -109,4 +109,26 @@ class Table {
         }
         return 0;
     }
+
+    method boolean check() {
+        var boolean solved;
+        var int i, j;
+        var int value;
+        var Cell cell;
+        let solved = true;
+        let j = 0;
+        while (j < n) {
+            let i = 0;
+            while (i < n) {
+                if (j * n + i + 1 < (n * n)) {
+                    let cell = cells[j * n + i];
+                    let value = cell.getValue();
+                    let solved = solved & (j * n + i + 1 = value);
+                }
+                let i = i + 1;
+            }
+            let j = j + 1;
+        }
+        return solved;
+    }
 }

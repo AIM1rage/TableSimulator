@@ -3,7 +3,7 @@ class Levels {
 
     function void init() {
         var Array gameField;
-        let levels = Array.new(2);
+        let levels = Array.new(3);
         //Level Bread
         let gameField = Array.new(9);
         let gameField[0] = 1;
@@ -15,7 +15,7 @@ class Levels {
         let gameField[6] = 7;
         let gameField[7] = 0;
         let gameField[8] = 8;
-        let levels[0] = Level.new(3, "Bread", gameField);
+        let levels[0] = Level.new(3, "Bread!", gameField);
         //Level Vegetable
         let gameField = Array.new(9);
         let gameField[0] = 1;
@@ -27,8 +27,26 @@ class Levels {
         let gameField[6] = 7;
         let gameField[7] = 5;
         let gameField[8] = 8;
-        let levels[0] = Level.new(3, "Vegetable", gameField);
+        let levels[1] = Level.new(3, "Vegetable!", gameField);
         //Level Soup
+        let gameField = Array.new(16);
+        let gameField[0] = 2;
+        let gameField[1] = 3;
+        let gameField[2] = 4;
+        let gameField[3] = 8;
+        let gameField[4] = 1;
+        let gameField[5] = 6;
+        let gameField[6] = 7;
+        let gameField[7] = 12;
+        let gameField[8] = 5;        
+        let gameField[9] = 10;        
+        let gameField[10] = 11;        
+        let gameField[11] = 15;        
+        let gameField[12] = 9;        
+        let gameField[13] = 13;        
+        let gameField[14] = 14;        
+        let gameField[15] = 0;        
+        let levels[2] = Level.new(4, "Stalin!", gameField);
         return;
     }
 

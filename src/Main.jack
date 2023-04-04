@@ -2,6 +2,7 @@ class Main {
     function void main() { 
         var TableGame game;
         var char key;
+        do Levels.init();
         let game = TableGame.new();
         do Display.printMenu();
         while (~(key = 0)) { let key = Keyboard.keyPressed(); }

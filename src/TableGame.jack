@@ -9,23 +9,39 @@ class TableGame {
     method void run() {
         var boolean finished;
         var char key;
+        var Array levels, gameField;
+        var Level level;
+        var int n;
+        var String name;
+        var boolean exit;
+        let levels = Levels.getLevels();
+        let level = levels[2];
+        let n = level.getN();
+        let name = level.getName();
+        let gameField = level.getGameField();
+        let table = Table.new(n, gameField);
         do Screen.clearScreen();
         do table.print();
         do Output.moveCursor(0, 0);
-        do Output.printString("Level 0");
+        do Output.printString("Level");
         do Output.println();
-        do Output.printString("Bread!");
+        do Output.printString(name);
         do Output.println();
         while (~finished) {
+            let finished = table.check();
+            //up-arrow
             if (key = 131) {
                 let actionsCount = actionsCount + table.makeMove(1);
             }
+            //down-arrow
             if (key = 133) {
                 let actionsCount = actionsCount + table.makeMove(2);
             }
+            //right-arrow
             if (key = 132) {
                 let actionsCount = actionsCount + table.makeMove(3);
             }
+            //left-arrow
             if (key = 130) {
                 let actionsCount = actionsCount + table.makeMove(4);
             }
@@ -33,6 +49,9 @@ class TableGame {
             do Output.printInt(actionsCount);
             let key = Keyboard.keyPressed();
         }
+        do Screen.clearScreen();
+        do Sys.wait(100);
+        do Display.printShalost(104 * 32 + (232 / 16));
         return;
     }
 }
