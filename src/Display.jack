@@ -1487,15 +1487,16 @@ class Display {
     
     function void printMenu() {
         do Display.printShalost(0);
-        do Output.moveCursor(4, 24);
+        do Output.moveCursor(2, 24);
         do Output.printString("TABLE SIMULATOR");
-        do Output.moveCursor(8, 15);
-        do Output.printString("Choose the game you want to play!");
-        do Output.moveCursor(12, 16);
-        do Output.printString("PYATNASHKI");
-        do Output.moveCursor(12, 36);
-        do Output.printString("DETERMINANT");
-        //do Output.moveCursor();
+        do Output.moveCursor(4, 22);
+        do Output.printString("P Y A T N A S H K I");
+        do Output.moveCursor(8, 10);
+        do Output.printString("A game from Uncle Lenin for Soviet children");
+        do Output.moveCursor(10, 15); 
+        do Output.printString("The future builders of communism!");
+        do Output.moveCursor(22, 49);
+        do Output.printString("[PRESS ANY KEY]");
         return;
     }
 }

@@ -2,7 +2,7 @@ function TableGame.new 0
 push constant 2
 call Memory.alloc 1
 pop pointer 0
-push constant 3
+push constant 4
 call Table.new 1
 pop this 0
 push constant 0
