@@ -1,10 +1,8 @@
-Table Simulator - Determinant Game, 9 Game
+Table Simulator - Pyatnashki
 ------------------------------------------------------------------
 
 ABOUT
 
-Improve your logical and counting skills by this games! 
+This game is made for Soviet children! 
 
-Try to win your opponent in Determinant Game. 
-
-If you are alone you can play 9 Game.
+Decide at your own risk if you are from the capitalist world!
