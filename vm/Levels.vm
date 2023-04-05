@@ -3,7 +3,7 @@ push constant 3
 call Memory.alloc 1
 pop static 0
 push constant 9
-call Array.new 1
+call Memory.alloc 1
 pop local 0
 push constant 0
 push local 0
@@ -102,7 +102,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 9
-call Array.new 1
+call Memory.alloc 1
 pop local 0
 push constant 0
 push local 0
@@ -209,7 +209,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 16
-call Array.new 1
+call Memory.alloc 1
 pop local 0
 push constant 0
 push local 0

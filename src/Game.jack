@@ -7,7 +7,7 @@ class Game {
     }
 
     method void run(int levelIndex) {
-        var boolean finished, moved;
+        var boolean finished;
         var char key;
         var Array levels, gameField;
         var Level level;
@@ -22,7 +22,9 @@ class Game {
         let actionsCount = 20;
         do printTable(name);
         while (~finished) {
-            let finished = table.check() | (actionsCount = 0);
+            do printActionsCounter();
+            while (~(key = 0)) { let key = Keyboard.keyPressed(); }
+            while (key = 0)    { let key = Keyboard.keyPressed(); }
             //up-arrow
             if (key = 131) {
                 let actionsCount = actionsCount - table.makeMove(1);
@@ -39,7 +41,7 @@ class Game {
             if (key = 130) {
                 let actionsCount = actionsCount - table.makeMove(4);
             }
-            do printActionsCounter();
+            let finished = table.check() | (actionsCount = 0);
             let key = Keyboard.keyPressed();
         }
         if (actionsCount > 0) {
