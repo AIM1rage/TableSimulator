@@ -37,7 +37,7 @@ label IF_FALSE1
 push this 0
 push this 0
 call Math.multiply 2
-call Array.new 1
+call Memory.alloc 1
 pop this 5
 push constant 0
 pop local 1

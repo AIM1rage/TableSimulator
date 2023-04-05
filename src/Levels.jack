@@ -3,7 +3,7 @@ class Levels {
 
     function void init() {
         var Array gameField;
-        let levels = Array.new(3);
+        let levels = Memory.alloc(3);
         //Level Bread
         let gameField = Array.new(9);
         let gameField[0] = 1;
