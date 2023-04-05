@@ -76,31 +76,28 @@ class Table {
         let valueFrom = cellFrom.getValue();
         if ((direction = 1) & (playerY > 0)) {
             let cellTo = cells[playerY - 1 * n + playerX];
-            let valueTo = cellTo.getValue();
             let playerY = playerY - 1;
             let moved = true;
         }
         if ((direction = 2) & (playerY + 1 < n)) {
             let cellTo = cells[playerY + 1 * n + playerX];
-            let valueTo = cellTo.getValue();
             let playerY = playerY + 1;
             let moved = true;
 
         }
         if ((direction = 3) & (playerX + 1 < n)) {
             let cellTo = cells[playerY * n + playerX + 1];
-            let valueTo = cellTo.getValue();
             let playerX = playerX + 1;
             let moved = true;
 
         }
         if ((direction = 4) & (playerX > 0)) {
             let cellTo = cells[playerY * n + playerX - 1];
-            let valueTo = cellTo.getValue();
             let playerX = playerX - 1;
             let moved = true;
         }
         if (moved) {
+            let valueTo = cellTo.getValue();
             do cellFrom.setValue(valueTo);
             do cellTo.setValue(valueFrom);
             do cellFrom.print();
@@ -122,8 +119,7 @@ class Table {
             while (i < n) {
                 if (j * n + i + 1 < (n * n)) {
                     let cell = cells[j * n + i];
-                    let value = cell.getValue();
-                    let solved = solved & (j * n + i + 1 = value);
+                    let solved = solved & (j * n + i + 1 = cell.getValue());
                 }
                 let i = i + 1;
             }

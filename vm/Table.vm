@@ -247,9 +247,6 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push local 2
-call Cell.getValue 1
-pop local 4
 push this 7
 push constant 1
 sub
@@ -282,9 +279,6 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push local 2
-call Cell.getValue 1
-pop local 4
 push this 7
 push constant 1
 add
@@ -317,9 +311,6 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push local 2
-call Cell.getValue 1
-pop local 4
 push this 6
 push constant 1
 add
@@ -350,9 +341,6 @@ add
 pop pointer 1
 push that 0
 pop local 2
-push local 2
-call Cell.getValue 1
-pop local 4
 push this 6
 push constant 1
 sub
@@ -365,6 +353,9 @@ push local 0
 if-goto IF_TRUE4
 goto IF_FALSE4
 label IF_TRUE4
+push local 2
+call Cell.getValue 1
+pop local 4
 push local 1
 push local 4
 call Cell.setValue 2
@@ -430,9 +421,6 @@ add
 pop pointer 1
 push that 0
 pop local 4
-push local 4
-call Cell.getValue 1
-pop local 3
 push local 0
 push local 2
 push this 0
@@ -441,7 +429,8 @@ push local 1
 add
 push constant 1
 add
-push local 3
+push local 4
+call Cell.getValue 1
 eq
 and
 pop local 0

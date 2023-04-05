@@ -3,6 +3,7 @@ class Game {
     field int actionsCount;
 
     constructor Game new() {
+        let actionsCount = 100;
         return this;
     }
 
@@ -20,38 +21,60 @@ class Game {
         let name = level.getName();
         let gameField = level.getGameField();
         let table = Table.new(n, gameField);
+        do printTable(name);
+        while (~finished) {
+            let finished = table.check() | (actionsCount = 0);
+            //up-arrow
+            if (key = 131) {
+                let actionsCount = actionsCount - table.makeMove(1);
+            }
+            //down-arrow
+            if (key = 133) {
+                let actionsCount = actionsCount - table.makeMove(2);
+            }
+            //right-arrow
+            if (key = 132) {
+                let actionsCount = actionsCount - table.makeMove(3);
+            }
+            //left-arrow
+            if (key = 130) {
+                let actionsCount = actionsCount - table.makeMove(4);
+            }
+            do Output.moveCursor(0, 61);
+            do Output.printInt(actionsCount);
+            do Output.printString("  ");
+            let key = Keyboard.keyPressed();
+        }
+        if (actionsCount > 0) {
+            do printFinishWindow(true);
+        } else {
+            do printFinishWindow(false);
+        }
+        return;
+    }
+
+    method void printTable(String name) {
         do Screen.clearScreen();
         do table.print();
         do Output.moveCursor(0, 0);
         do Output.printString("Level");
         do Output.println();
         do Output.printString(name);
-        do Output.println();
-        while (~finished) {
-            let finished = table.check();
-            //up-arrow
-            if (key = 131) {
-                let actionsCount = actionsCount + table.makeMove(1);
-            }
-            //down-arrow
-            if (key = 133) {
-                let actionsCount = actionsCount + table.makeMove(2);
-            }
-            //right-arrow
-            if (key = 132) {
-                let actionsCount = actionsCount + table.makeMove(3);
-            }
-            //left-arrow
-            if (key = 130) {
-                let actionsCount = actionsCount + table.makeMove(4);
-            }
-            do Output.moveCursor(3, 0);
-            do Output.printInt(actionsCount);
-            let key = Keyboard.keyPressed();
-        }
-        do Screen.clearScreen();
+        do Output.moveCursor(0, 53);
+        do Output.printString("Actions");
+        return;
+    }
+
+    method void printFinishWindow(boolean isWinner) {
         do Sys.wait(100);
-        do Display.printShalost(104 * 32 + (232 / 16));
+        do Screen.clearScreen();
+        if (isWinner) {
+            do Display.printShalost(104 * 32 + (232 / 16));
+        } else {
+            do Display.printZ(104 * 32 + (232 / 16));
+        }
+        do Sys.wait(5000);
+        do Screen.clearScreen();
         return;
     }
 }
