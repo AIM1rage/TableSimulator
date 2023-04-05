@@ -3,11 +3,10 @@ class Game {
     field int actionsCount;
 
     constructor Game new() {
-        let actionsCount = 100;
         return this;
     }
 
-    method void run() {
+    method void run(int levelIndex) {
         var boolean finished;
         var char key;
         var Array levels, gameField;
@@ -16,11 +15,12 @@ class Game {
         var String name;
         var boolean exit;
         let levels = Levels.getLevels();
-        let level = levels[2];
+        let level = levels[levelIndex];
         let n = level.getN();
         let name = level.getName();
         let gameField = level.getGameField();
         let table = Table.new(n, gameField);
+        let actionsCount = 20;
         do printTable(name);
         while (~finished) {
             let finished = table.check() | (actionsCount = 0);
@@ -42,7 +42,7 @@ class Game {
             }
             do Output.moveCursor(0, 61);
             do Output.printInt(actionsCount);
-            do Output.printString("  ");
+            do Output.printString(" ");
             let key = Keyboard.keyPressed();
         }
         if (actionsCount > 0) {
@@ -58,7 +58,7 @@ class Game {
         do table.print();
         do Output.moveCursor(0, 0);
         do Output.printString("Level");
-        do Output.println();
+        do Output.moveCursor(1, 0);
         do Output.printString(name);
         do Output.moveCursor(0, 53);
         do Output.printString("Actions");

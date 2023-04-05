@@ -2,14 +2,18 @@ class Main {
     function void main() { 
         var Game game;
         var char key;
+        var int levelIndex;
+        let levelIndex = 2;
         do Levels.init();
+        let game = Game.new();
         while (true) {
-            let game = Game.new();
             do Display.printMenu();
             while (~(key = 0)) { let key = Keyboard.keyPressed(); }
             while (key = 0)    { let key = Keyboard.keyPressed(); }
             while (~(key = 0)) { let key = Keyboard.keyPressed(); }
-            do game.run();
+            if ((-1 < levelIndex) & (levelIndex < 3)) {
+                do game.run(levelIndex);
+            }
         }
         return;
     }

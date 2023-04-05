@@ -1494,8 +1494,8 @@ class Display {
         do Output.printString("A game from Uncle Lenin for Soviet children");
         do Output.moveCursor(10, 15); 
         do Output.printString("The future builders of communism!");
-        do Output.moveCursor(22, 49);
-        do Output.printString("[PRESS ANY KEY]");
+        do Output.moveCursor(22, 34);
+        do Output.printString("[CHOOSE ANY LEVEL FROM 0 TO 2]");
         return;
     }
 }
