@@ -13,7 +13,6 @@ class Game {
         var Level level;
         var int n;
         var String name;
-        var boolean exit;
         let levels = Levels.getLevels();
         let level = levels[levelIndex];
         let n = level.getN();
@@ -40,9 +39,7 @@ class Game {
             if (key = 130) {
                 let actionsCount = actionsCount - table.makeMove(4);
             }
-            do Output.moveCursor(0, 61);
-            do Output.printInt(actionsCount);
-            do Output.printString(" ");
+            do printActionsCounter();
             let key = Keyboard.keyPressed();
         }
         if (actionsCount > 0) {
@@ -75,6 +72,19 @@ class Game {
         }
         do Sys.wait(5000);
         do Screen.clearScreen();
+        return;
+    }
+
+    method void printActionsCounter() {
+        do Output.moveCursor(0, 61);
+        do Output.printInt(actionsCount);
+        do Output.printString(" ");
+        return;
+    }
+
+    method void dispose() {
+        do table.dispose();
+        do Memory.deAlloc(this);
         return;
     }
 }

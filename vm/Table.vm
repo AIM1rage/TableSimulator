@@ -449,3 +449,55 @@ goto WHILE_EXP0
 label WHILE_END0
 push local 0
 return
+function Table.dispose 3
+push argument 0
+pop pointer 0
+push constant 0
+pop local 1
+label WHILE_EXP0
+push local 1
+push this 0
+lt
+not
+if-goto WHILE_END0
+push constant 0
+pop local 0
+label WHILE_EXP1
+push local 0
+push this 0
+lt
+not
+if-goto WHILE_END1
+push local 1
+push this 0
+call Math.multiply 2
+push local 0
+add
+push this 5
+add
+pop pointer 1
+push that 0
+pop local 2
+push local 2
+call Cell.dispose 1
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WHILE_EXP1
+label WHILE_END1
+push local 1
+push constant 1
+add
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push this 5
+call Memory.deAlloc 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return

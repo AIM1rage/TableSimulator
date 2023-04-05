@@ -5,7 +5,7 @@ class Table {
     field int tableSize;
     field int cellSize;
     field Array cells;
-    field itn playerX, playerY;
+    field int playerX, playerY;
 
     constructor Table new(int An, Array gameField) {
         var int i, j;
@@ -126,5 +126,23 @@ class Table {
             let j = j + 1;
         }
         return solved;
+    }
+
+    method void dispose() {
+        var int i, j;
+        var Cell cell;
+        let j = 0;
+        while (j < n) {
+            let i = 0;
+            while (i < n) {
+                let cell = cells[j * n + i];
+                do cell.dispose();
+                let i = i + 1;
+            }
+            let j = j + 1;
+        }
+        do Memory.deAlloc(cells);
+        do Memory.deAlloc(this);
+        return;
     }
 }

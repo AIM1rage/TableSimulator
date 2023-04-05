@@ -11,9 +11,8 @@ class Main {
             while (~(key = 0)) { let key = Keyboard.keyPressed(); }
             while (key = 0)    { let key = Keyboard.keyPressed(); }
             while (~(key = 0)) { let key = Keyboard.keyPressed(); }
-            if ((-1 < levelIndex) & (levelIndex < 3)) {
-                do game.run(levelIndex);
-            }
+            do game.run(levelIndex);
+            do game.dispose();
         }
         return;
     }
