@@ -1,8 +1,8 @@
-class TableGame {
+class Game {
     field Table table;
     field int actionsCount;
 
-    constructor TableGame new() {
+    constructor Game new() {
         return this;
     }
 

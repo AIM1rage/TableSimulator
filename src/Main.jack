@@ -1,9 +1,9 @@
 class Main {
     function void main() { 
-        var TableGame game;
+        var Game game;
         var char key;
         do Levels.init();
-        let game = TableGame.new();
+        let game = Game.new();
         do Display.printMenu();
         while (~(key = 0)) { let key = Keyboard.keyPressed(); }
 	    while (key = 0)    { let key = Keyboard.keyPressed(); }
