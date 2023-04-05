@@ -222,7 +222,7 @@ push constant 232
 push constant 16
 call Math.divide 2
 add
-call Display.printZ 1
+call Display.printNeudacha 1
 pop temp 0
 label IF_END0
 push constant 5000

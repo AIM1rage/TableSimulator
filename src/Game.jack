@@ -71,7 +71,7 @@ class Game {
         if (isWinner) {
             do Display.printShalost(104 * 32 + (232 / 16));
         } else {
-            do Display.printZ(104 * 32 + (232 / 16));
+            do Display.printNeudacha(104 * 32 + (232 / 16));
         }
         do Sys.wait(5000);
         do Screen.clearScreen();
