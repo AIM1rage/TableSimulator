@@ -449,7 +449,7 @@ goto WHILE_EXP0
 label WHILE_END0
 push local 0
 return
-function Table.dispose 3
+function Table.dispose 2
 push argument 0
 pop pointer 0
 push constant 0
@@ -477,9 +477,7 @@ push this 5
 add
 pop pointer 1
 push that 0
-pop local 2
-push local 2
-call Cell.dispose 1
+call Memory.deAlloc 1
 pop temp 0
 push local 0
 push constant 1

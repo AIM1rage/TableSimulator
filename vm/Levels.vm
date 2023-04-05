@@ -1,6 +1,6 @@
 function Levels.init 1
 push constant 3
-call Array.new 1
+call Memory.alloc 1
 pop static 0
 push constant 9
 call Array.new 1

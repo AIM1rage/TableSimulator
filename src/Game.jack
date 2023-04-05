@@ -7,7 +7,7 @@ class Game {
     }
 
     method void run(int levelIndex) {
-        var boolean finished;
+        var boolean finished, moved;
         var char key;
         var Array levels, gameField;
         var Level level;
