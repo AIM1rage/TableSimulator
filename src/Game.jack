@@ -59,7 +59,7 @@ class Game {
         do Output.printString("Level");
         do Output.moveCursor(1, 0);
         do Output.printString(name);
-        do Output.moveCursor(0, 53);
+        do Output.moveCursor(0, 51);
         do Output.printString("Actions");
         return;
     }
@@ -78,9 +78,9 @@ class Game {
     }
 
     method void printActionsCounter() {
-        do Output.moveCursor(0, 61);
+        do Output.moveCursor(0, 59);
         do Output.printInt(actionsCount);
-        do Output.printString(" ");
+        do Output.printString("  ");
         return;
     }
 
