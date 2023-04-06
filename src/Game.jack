@@ -19,7 +19,7 @@ class Game {
         let name = level.getName();
         let gameField = level.getGameField();
         let table = Table.new(n, gameField);
-        let actionsCount = 20;
+        let actionsCount = 200;
         do printTable(name);
         while (~finished) {
             do printActionsCounter();
