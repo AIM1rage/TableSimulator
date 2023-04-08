@@ -203,7 +203,7 @@ call Output.printString 1
 pop temp 0
 push constant 0
 return
-function Game.printFinishWindow 0
+function Game.printFinishWindow 1
 push argument 0
 pop pointer 0
 push constant 100
@@ -211,28 +211,24 @@ call Sys.wait 1
 pop temp 0
 call Screen.clearScreen 0
 pop temp 0
+push constant 104
+push constant 32
+call Math.multiply 2
+push constant 232
+push constant 16
+call Math.divide 2
+add
+pop local 0
 push argument 1
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
-push constant 104
-push constant 32
-call Math.multiply 2
-push constant 232
-push constant 16
-call Math.divide 2
-add
+push local 0
 call Display.printShalost 1
 pop temp 0
 goto IF_END0
 label IF_FALSE0
-push constant 104
-push constant 32
-call Math.multiply 2
-push constant 232
-push constant 16
-call Math.divide 2
-add
+push local 0
 call Display.printNeudacha 1
 pop temp 0
 label IF_END0

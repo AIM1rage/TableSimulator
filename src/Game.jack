@@ -65,12 +65,14 @@ class Game {
     }
 
     method void printFinishWindow(boolean isWinner) {
+        var int offset;
         do Sys.wait(100);
         do Screen.clearScreen();
+        let offset = 104 * 32 + (232 / 16);
         if (isWinner) {
-            do Display.printShalost(104 * 32 + (232 / 16));
+            do Display.printShalost(offset);
         } else {
-            do Display.printNeudacha(104 * 32 + (232 / 16));
+            do Display.printNeudacha(offset);
         }
         do Sys.wait(5000);
         do Screen.clearScreen();
