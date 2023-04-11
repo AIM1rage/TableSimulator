@@ -3,13 +3,15 @@ class Main {
         var Game game;
         var char key;
         var int levelIndex;
+        var Level level;
         do Levels.init();
         do Display.printMenu();
         let game = Game.new();
         while (true) {
             let levelIndex = Keyboard.readInt("Enter here:");
             if ((-1 < levelIndex) & (levelIndex < 3)) {
-                do game.run(levelIndex);
+                let level = Levels.getLevel(levelIndex);
+                do game.run(level);
                 do game.dispose();  
                 do Display.printMenu();
             }

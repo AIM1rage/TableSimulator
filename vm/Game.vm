@@ -4,34 +4,26 @@ call Memory.alloc 1
 pop pointer 0
 push pointer 0
 return
-function Game.run 7
+function Game.run 5
 push argument 0
 pop pointer 0
-call Levels.getLevels 0
-pop local 2
 push argument 1
-push local 2
-add
-pop pointer 1
-push that 0
-pop local 4
-push local 4
 call Level.getN 1
-pop local 5
-push local 4
-call Level.getName 1
-pop local 6
-push local 4
-call Level.getGameField 1
 pop local 3
-push local 5
+push argument 1
+call Level.getName 1
+pop local 4
+push argument 1
+call Level.getGameField 1
+pop local 2
 push local 3
+push local 2
 call Table.new 2
 pop this 0
 push constant 200
 pop this 1
 push pointer 0
-push local 6
+push local 4
 call Game.printTable 2
 pop temp 0
 label WHILE_EXP0

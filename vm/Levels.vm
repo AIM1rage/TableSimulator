@@ -367,6 +367,10 @@ push temp 0
 pop that 0
 push constant 0
 return
-function Levels.getLevels 0
+function Levels.getLevel 0
+push argument 0
 push static 0
+add
+pop pointer 1
+push that 0
 return

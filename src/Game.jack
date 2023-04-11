@@ -6,15 +6,12 @@ class Game {
         return this;
     }
 
-    method void run(int levelIndex) {
+    method void run(Level level) {
         var boolean finished;
         var char key;
-        var Array levels, gameField;
-        var Level level;
+        var Array gameField;
         var int n;
         var String name;
-        let levels = Levels.getLevels();
-        let level = levels[levelIndex];
         let n = level.getN();
         let name = level.getName();
         let gameField = level.getGameField();

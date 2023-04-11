@@ -50,7 +50,7 @@ class Levels {
         return;
     }
 
-    function Array getLevels() {
-        return levels;
+    function Array getLevel(int levelIndex) {
+        return levels[levelIndex];
     }
 }

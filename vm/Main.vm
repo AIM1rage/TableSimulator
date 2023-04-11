@@ -1,4 +1,4 @@
-function Main.main 3
+function Main.main 4
 call Levels.init 0
 pop temp 0
 call Display.printMenu 0
@@ -47,8 +47,11 @@ and
 if-goto IF_TRUE0
 goto IF_FALSE0
 label IF_TRUE0
-push local 0
 push local 2
+call Levels.getLevel 1
+pop local 3
+push local 0
+push local 3
 call Game.run 2
 pop temp 0
 push local 0
